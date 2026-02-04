@@ -32,18 +32,18 @@
 
 // output: 0
 
-function repeatedNum(arr){
-    let count = 0;
-    for(let numOfArr of arr ){
-        if(numOfArr === 25){
-            count++;
-        }
-    }
-    return count;
-}
-const numbers = [5,6,11,12,98,2];
-const result = repeatedNum(numbers);
-console.log(result);
+// function repeatedNum(arr){
+//     let count = 0;
+//     for(let numOfArr of arr ){
+//         if(numOfArr === 5){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// const numbers = [5,6,11,12,98,2,5];
+// const result = repeatedNum(numbers);
+// console.log(result);
 
 
 
@@ -52,3 +52,31 @@ console.log(result);
 
 // ********************
 
+/**
+ * Task-3:
+Write a function to count the number of vowels in a string.
+ */
+
+function vowels(givenVowel){
+    let sum = "";
+    const strLowerCase = givenVowel.toLowerCase();
+    const strToArr = strLowerCase.split("");
+    for(const strArray of strToArr){
+        if(strArray == "a"){
+            sum = strArray + sum;
+        }else if(strArray == "e"){
+            sum = strArray + sum;
+        }else if(strArray == "i"){
+            sum = strArray + sum;
+        }else if(strArray == "o"){
+            sum = strArray + sum;
+        }else if(strArray == "u"){
+            sum = strArray + sum;
+        }
+    } 
+    const len = sum.split("").length;
+    return len;
+}
+const vowel = "I love";
+const str = vowels(vowel);
+console.log(str);
