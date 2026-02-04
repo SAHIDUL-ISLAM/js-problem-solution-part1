@@ -57,26 +57,50 @@
 Write a function to count the number of vowels in a string.
  */
 
-function vowels(givenVowel){
+// function vowels(givenVowel){
+//     let sum = "";
+//     const strLowerCase = givenVowel.toLowerCase();
+//     const strToArr = strLowerCase.split("");
+//     for(const strArray of strToArr){
+//         if(strArray == "a"){
+//             sum = strArray + sum;
+//         }else if(strArray == "e"){
+//             sum = strArray + sum;
+//         }else if(strArray == "i"){
+//             sum = strArray + sum;
+//         }else if(strArray == "o"){
+//             sum = strArray + sum;
+//         }else if(strArray == "u"){
+//             sum = strArray + sum;
+//         }
+//     } 
+//     const len = sum.split("").length;
+//     return len;
+// }
+// const vowel = "I love";
+// const str = vowels(vowel);
+// console.log(str);
+
+
+/**
+ * 
+Task-4:
+Write a function to find the longest word in a given string.
+
+sample-input: I am learning Programming to become a programmer
+
+sample-output: Programming
+ */
+function word(longest){
+    const strToArr = longest.split(" ");
     let sum = "";
-    const strLowerCase = givenVowel.toLowerCase();
-    const strToArr = strLowerCase.split("");
-    for(const strArray of strToArr){
-        if(strArray == "a"){
-            sum = strArray + sum;
-        }else if(strArray == "e"){
-            sum = strArray + sum;
-        }else if(strArray == "i"){
-            sum = strArray + sum;
-        }else if(strArray == "o"){
-            sum = strArray + sum;
-        }else if(strArray == "u"){
-            sum = strArray + sum;
+    for(const array of strToArr){
+        if(array.length>sum.length){
+            sum = array;
         }
-    } 
-    const len = sum.split("").length;
-    return len;
+    }
+    return sum;
 }
-const vowel = "I love";
-const str = vowels(vowel);
-console.log(str);
+const str = "I am learning Programming to become a programmer";
+const theword = word(str);
+console.log(theword);
