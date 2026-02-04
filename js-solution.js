@@ -91,16 +91,31 @@ sample-input: I am learning Programming to become a programmer
 
 sample-output: Programming
  */
-function word(longest){
-    const strToArr = longest.split(" ");
-    let sum = "";
-    for(const array of strToArr){
-        if(array.length>sum.length){
-            sum = array;
-        }
-    }
-    return sum;
+// function word(longest){
+//     const strToArr = longest.split(" ");
+//     let sum = "";
+//     for(const array of strToArr){
+//         if(array.length>sum.length){
+//             sum = array;
+//         }
+//     }
+//     return sum;
+// }
+// const str = "I am learning Programming to become a programmer";
+// const theword = word(str);
+// console.log(theword);
+
+
+/**
+ * Generate a random number between 10 to 20.
+ */
+// const max = 21;
+// const min = 10;
+// console.log(Math.floor(Math.random()*(max-min)+min));
+
+function randomNumber(max, min){
+    const generator = Math.floor(Math.random()*(max-min)+min);
+    return generator;
 }
-const str = "I am learning Programming to become a programmer";
-const theword = word(str);
-console.log(theword);
+const result = randomNumber(21,10);
+console.log(result);
